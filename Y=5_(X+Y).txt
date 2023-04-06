@@ -1,0 +1,32 @@
+﻿
+org 100
+
+Clear
+input
+Store X
+input 
+Store Y
+Add X
+store C
+
+loop,	load result
+		Add C
+        store result
+        load B
+        Subt one
+        store B
+        Skipcond 400
+        jump loop
+
+load result
+Output
+Halt
+
+
+        
+X, DEC 0
+Y, DEC 0
+C, DEC 0 
+B, DEC 5
+one, DEC 1
+result, DEC 0

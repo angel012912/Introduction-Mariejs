@@ -1,0 +1,25 @@
+﻿
+/Se cargan valores y posteriormente se almacenan en otras ubicaciones definidas por otra variable
+load var1
+StoreI ub4
+load var2
+storeI ub3
+load var3
+storeI ub2
+load var4
+storeI ub1
+
+
+halt / Se termina el programa
+
+
+//Variables 
+var1, DEC 1 /Se declaran 4 variables con sus respectivos valores 
+var2, DEC 2
+var3, DEC 3
+var4, DEC 4
+
+ub1, HEX 20
+ub2, HEX 21
+ub3, HEX 22
+ub4, HEX 23

@@ -1,0 +1,67 @@
+﻿org 100
+
+Input /Se solicita ingresar un valor 
+store X /Se guarda el valor ingresado en la ubicacion de X
+Input / Se solicita ingresar otro valor
+store A /Se guarda el valor ingresado en la ubicacion de A
+Input /Se solicita ingresar un valor
+store B /Se guarda el valor ingresado en la ubicacion de B
+Input /Se solicita ingresar un valor
+Store C /Se guarda el valor ingresado en la ubicacion de C
+
+loop1,	load result1  /Se define un ciclo, en donde su primera instruccion sea cargar el valor de la ubicacion de la variable el cual va a iniciar en 0 y va a ir acomulando las sumas 
+		Add A /Se le suma el valor que esta guardado en la ubicacion de la variable al valor cargado previamente
+        store result1 /Se guarda el valor restultante de la suma en la ubicacion de la variable 
+		load D /Se carga el valor de la ubicacion de la variable , dicha variable va a ser la encargada de llevar el contador de las veces que se realizará el ciclo
+        Subt one      /Se le resta el valor que esta guardado en la ubicacion de la variable al valor cargado previamente 
+        store D	      /Se guarda el valor resultante de la resta en la ubicacion de la variable
+        Skipcond 400  /Se evalua si el valor cargado en AC es 0
+        jump loop1    /Si la condicion se cumple entonces se salta el ciclo definido
+/Una vez terminado el ciclo tendremos el valor de las sumas almacenado en una variable
+
+/En los siguientes ciclos se hace lo mismo que en el primero
+        
+loop2,	load result2   
+		Add B
+        store result2
+		load E
+        Subt one
+        store E
+        Skipcond 400
+        Jump loop2
+      
+loop3,	load result3
+		Add C
+        Store result3
+		load F
+        Subt one
+        store F
+        Skipcond 400
+        jump loop3
+        
+load X /Se carga el valor X
+subt result1 /A este valor se le resta el valor de la primer multiplicacion 
+store Y /El resultado de esta resta se almacena en la variable Y
+subt result2 /El resultado de esta resta se le restará posteriormente el valor de la segunda multiplicacion
+store Y /El resultado de esta segunda resta se almacena igualmente en la variable Y
+subt result3 /Al resultado de la segunda resta se le resta igualmente el valor de la tercer multiplicacion
+store Y /El resultado se resta en la variable Y
+Output /Se muestra el valor final
+ 
+
+
+Halt /Se termina el programa
+ 
+X, DEC 0 /Se declara una variable definida con valor decimal 0
+A, DEC 0 /Se declara una variable definida con valor decimal 0
+B, DEC 0 /Se declara una variable definida con valor decimal 0
+C, DEC 0 /Se declara una variable definida con valor decimal 0
+D, DEC 2 /Se declara una variable definida con valor decimal 2
+E, DEC 3 /Se declara una variable definida con valor decimal 3
+F, DEC 4 /Se declara una variable definida con valor decimal 4
+
+result1, DEC 0 /Se declara una variable definida con valor decimal 0
+result2, DEC 0 /Se declara una variable definida con valor decimal 0
+result3, DEC 0 /Se declara una variable definida con valor decimal 0
+Y, DEC 0 /Se declara una variable definida con valor decimal 0
+one, DEC 1 /Se declara una variable definida con valor decimal 1

@@ -1,0 +1,37 @@
+﻿org 100
+
+input /Se solicita el primer valor 
+store A /Se almacena este valor en una variable
+input  /Se solicita el segundo valor
+Store B /Igualmente se almacena el valor en una variable
+input  /Se solicita el tercer valor
+Store C /Igualmente se almacena el valor en una variable
+
+load A /Se carga el primer valor
+Subt B /A este valor cargado se le resta el segundo valor
+store A /Se actualiza la variable con el valor resultante de la resta
+Add C /A este valor se le añade C
+store Y /Se almacena el valor resultante en una variable
+
+loop,	load res /Se declara un ciclo, se carga el valor de la variable que va a ir acomulando las sumas
+		add Y /Al valor cargado se le suma el valor de la variable Y
+        store res /El resultado de la suma se almacena en una variable que se va a ir acomulando cada que se repita el ciclo
+       	load D /Se carga el valor de la variable D el cual va a ser el que indique las veces que se repetirá el ciclo
+        subt one /A este valor se le resta uno
+        store D /Se actualiza el valor de la variable D
+        Skipcond 400 /Evalúa si el valor es igual a 0
+        jump loop /Si se cumple la condicion entonces se va salir del ciclo
+load res /Una vez que termine el ciclo, se carga el valor de res
+Output /Se imprime el valor
+
+
+halt /Se termina el programa
+
+
+Y, DEC 0 /Se declara una variable definida con valor decimal 0
+A, DEC 0 /Se declara una variable definida con valor decimal 0
+B, DEC 0 /Se declara una variable definida con valor decimal 0
+C, DEC 0 /Se declara una variable definida con valor decimal 0
+D, DEC 5 /Se declara una variable definida con valor decimal 5
+res, DEC 0 /Se declara una variable definida con valor decimal 0
+one, DEC 1 /Se declara una variable definida con valor decimal 1

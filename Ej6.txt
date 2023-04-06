@@ -1,0 +1,54 @@
+﻿  //Ejercicio 6 Tarea 3
+
+
+loop,	load n
+		storei loc
+        
+        add one
+        store n
+        
+        load loc
+        add one
+        store loc
+        
+        load cont
+        subt one
+        store cont
+        
+        skipcond 400
+        jump loop
+  
+  
+loop2,  loadI loc2
+		add sum
+        storeI loc2
+        
+        load sum 
+        add one
+        store sum
+        
+        load loc2
+        add one
+        store loc2
+        
+        load cont2
+        subt one
+        store cont2
+        
+        Skipcond 400
+        Jump loop2
+
+     
+        
+
+Halt
+
+//Variables
+
+n, DEC 15
+loc, HEX 50
+one, DEC 1
+cont, DEC 5/Empieza en 5 
+cont2, DEC 5
+loc2,  HEX 50
+sum, DEC 1

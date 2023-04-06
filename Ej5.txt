@@ -1,0 +1,28 @@
+﻿//Ejercicio 5 Tarea 3
+
+
+loop,	load n  /Cargar el numero Inicial
+		storeI loc /ponerlo en una localidad especifica
+        
+        load n
+        add one
+        store n
+        
+        load loc
+        add one
+        store loc
+        
+        load cont
+        subt one
+        store cont
+        Skipcond 400
+        jump loop
+ 
+ Halt
+
+//Variables
+
+n, DEC 15
+loc, HEX 50
+one, DEC 1
+cont, DEC 6 //Empieza en 6 porque pide 6 numeros
